@@ -1,0 +1,17 @@
+#!/bin/sh
+
+codex_identity='(^|[^[:alnum:]_])((openai[-_ ]+)?codex(\[bot\])?)([^[:alnum:]_]|$)|<no-?reply@openai\.com>'
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+    [ "$local_ref" = '(delete)' ] && continue
+    range=$local_sha
+    if git cat-file -e "$remote_sha^{commit}" 2>/dev/null; then
+        range=$remote_sha..$local_sha
+    fi
+    attribution=$(git --no-replace-objects log --no-show-signature \
+        --format='%an <%ae>%n%cn <%ce>%n%(trailers:key=Co-authored-by)' "$range" --) || exit 1
+    if printf '%s\n' "$attribution" | grep -Eiq "$codex_identity"; then
+        printf '%s\n' "Push blocked: $local_ref contains Codex attribution." >&2
+        exit 1
+    fi
+done

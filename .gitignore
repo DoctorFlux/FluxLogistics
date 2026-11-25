@@ -1,0 +1,14 @@
+# Local install and synchronization artifacts
+___sync-continuous.bat
+*Sync_Log.txt
+SavedVariables/
+*.bak
+dist/
+FluxCraft_Fresh_Start_Codex.md
+docs/SOURCE_EVIDENCE.md
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

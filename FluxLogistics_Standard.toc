@@ -1,0 +1,8 @@
+## Interface: 120105
+## Title: FluxLogistics
+## Notes: Compact Auction House sale messages.
+## Version: 0.2.49-dev
+## SavedVariablesPerCharacter: FluxLogisticsAuctionSalesDB
+
+FluxCraft\Locale.lua
+FluxCraft\AuctionSales.lua

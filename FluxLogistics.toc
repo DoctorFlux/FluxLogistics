@@ -1,0 +1,31 @@
+## Interface: 16001, 50504, 20506, 11509
+## Title: FluxLogistics
+## Notes: Plan, source and queue crafting from the profession window.
+## Version: 0.2.71-dev
+## Dependencies: _FluxUI
+## OptionalDeps: Syndicator, Auctionator, TradeSkillMaster
+## SavedVariables: FluxLogisticsDB, FluxCraftDB
+## SavedVariablesPerCharacter: FluxLogisticsCharDB, FluxCraftCharDB, FluxLogisticsAuctionSalesDB
+
+FluxCraft\Target.lua
+FluxCraft\Locale.lua
+FluxCraft\AuctionSales.lua
+FluxCraft\Init.lua
+FluxCraft\AdaptersInventory.lua
+FluxCraft\AdaptersAuctionator.lua
+FluxCraft\Catalog.lua
+FluxCraft\Planner.lua
+FluxCraft\Pricing.lua
+FluxCraft\Comparison.lua
+FluxCraft\Clients.lua
+FluxCraft\Book.lua
+FluxCraft\Queue.lua
+FluxCraft\Execution.lua
+FluxCraft\Logistics.lua
+FluxCraft\Diagnostics.lua
+FluxCraft\RecipeList.lua
+FluxCraft\RecipeDensity.lua
+FluxCraft\RecipeProfit.lua
+FluxCraft\Graph.lua
+FluxCraft\SkillRanges.lua
+FluxCraft\UI.lua
